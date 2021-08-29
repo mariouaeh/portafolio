@@ -1,0 +1,353 @@
+/* Importar fuentes custom*/
+@font-face{
+	font-family: "yanone";
+	src: url("fonts/yanone.ttf");
+}
+
+@font-face{
+	font-family: "finger";
+	src: url("fonts/finger.ttf");
+}
+
+/*Generales*/
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	font-family: "yanone", Arial, Helvetica;
+	font-size: 20px;
+	background: url("../img/back2.jpg");
+	background-attachment: fixed;
+}
+
+
+.clearfix{
+	float:none;
+	clear:both;
+}
+
+/*Barra de navegacion / cabecera*/
+
+/*Logotipo*/
+
+#logo{
+	font-family: "finger";
+	font-size: 30px;
+  cursor: pointer;
+}
+
+#logo a{
+	transition: color 500ms, transform 500ms;
+}
+
+#logo a:hover{
+	background: transparent;
+	color: black;
+	transform:scale(1.50,1.50);
+}
+
+/*Contenedor principal*/
+
+#content{
+	min-height: 600px;
+	height: auto;
+	width: 88%;
+	margin: 0px auto;
+	box-shadow: 0px 0px 40px black;
+	border-left:1px solid #b7b7b7;
+	border-right:1px solid #b7b7b7;
+	background: rgba(255, 255, 255, 0.7);
+	padding-top: 20px;
+}
+
+/*Pie de pagina*/
+footer{
+	width: 75%;
+	margin: 0px auto;
+	padding-top: 15px;
+  font-family: "finger";
+	font-size: 20px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 5px;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+/*Sobre mi*/
+#title{
+	width: 70%;
+	margin: 0px auto;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+.title-s h1{
+	font-family: "finger";
+	font-size: 6vw;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 5px;
+  cursor: pointer;
+}
+.title-s h3{
+	font-family: "finger";
+
+}
+
+#title h2{
+	font-size: 25px;
+	color: gray;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+article.about{
+	width: 70%;
+	margin: 0px auto;
+	margin-bottom: 20px;
+  cursor: pointer;
+	font-size: 18px;
+}
+
+.about h2{
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+  font-family: "finger";
+  font-size: 2.7vw;
+}
+
+.about p{
+	font-size:calc(0.5em + 0.7vw) ;
+	text-align: justify;
+}
+.about li{
+	font-size:calc(0.5em + 0.7vw) ;
+	text-align: justify;
+}
+/*Sección con formulario*/
+
+.container{
+	padding: 5px;
+	padding-top: 10px;
+}
+
+.container .image{
+	float: left;
+  width: 47%;
+
+}
+.list-p{
+  list-style: none;
+    margin-left: -25px;
+}
+.container .image img{
+  width: 100%;
+  max-height: 450px;
+}
+
+.container .data{
+	float: left;
+	width: 48%;
+	margin-left:30px;
+}
+
+.container h2{
+	display: block;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+}
+
+form{
+	width: 80%;
+}
+
+form label{
+	display: block;
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form textarea{
+	width: 40%;
+	padding: 5px;
+}
+
+form button,
+form input[type="submit"],
+.button-edit,
+.button-delete{
+	display: block;
+	font-size: 17px;
+	padding: 10px;
+	margin-top: 15px;
+	color:white;
+	background: rgba(53, 103, 164, 1);
+	border: 1px solid rgba(13, 67, 133, 1);
+	cursor: pointer;
+}
+
+.button-edit,
+.button-delete{
+  width: 30%;
+  text-align: center;
+	float: left;
+	margin-right: 10px;
+	text-decoration: none;
+}
+
+.button-edit{
+	background: orange;
+	border: none;
+}
+
+.button-delete{
+	background: red;
+	border: none;
+}
+
+form button:hover,
+form input[type="submit"]:hover{
+	background: rgba(53, 103, 164, 0.8);
+	border: 1px solid rgba(13, 67, 133, 1);
+}
+
+form input[disabled]{
+	opacity: 0.4;
+	cursor: not-allowed;
+}
+
+.form_error{
+	font-size: 13px;
+	padding: 3px;
+	background: red;
+	color:white;
+	margin-left: 5px;
+}
+
+.message{
+	width: 50%;
+	padding: 5px;
+	border: 1px solid #eee;
+}
+
+.success{
+	background: green;
+	color: white;
+}
+
+.message a{
+	color: white;
+}
+
+.failed{
+	background: red;
+	color: white;
+}
+
+.detalle{
+  background: rgba(53, 103, 164, 0.8)
+}
+/*Pagina de proyectos*/
+
+.project{
+	list-style: none;
+	display: block;
+	float: left;
+	width: 28%;
+	text-align: center;
+}
+
+
+.card{
+  list-style: none;
+  transition:0.5s;
+  cursor:pointer;
+  float: left;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.card p {
+  font-size: 1.8vh;
+  margin-bottom: 20px;
+}
+.card-title{
+
+  transition:1s;
+  cursor:pointer;
+}
+.card-title i{
+  transition:1s;
+  cursor:pointer;
+  color:#ffa710
+}
+.card-title i:hover{
+  transform: scale(1.25) rotate(100deg);
+  color:#18d4ca;
+
+}
+.card:hover{
+  transform: scale(1.05);
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+}
+
+.card::before, .card::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: scale3d(0, 0, 1);
+  transition: transform .3s ease-out 0s;
+  background: rgba(255, 255, 255, 0.1);
+  content: '';
+  pointer-events: none;
+}
+.card::before {
+  transform-origin: left top;
+}
+.card::after {
+  transform-origin: right bottom;
+}
+.card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
+  transform: scale3d(1, 1, 1);
+  color: black;
+}
+
+.image{
+	width: 100%;
+	height: 150px;
+	overflow: hidden;
+}
+.image-deta{
+  float: left;
+  max-height: 300px;
+}
+
+.card img{
+	width: 100%;
+	height: 25vh;
+}
+
+.card a{
+	text-decoration: none;
+	color: black;
+}
+
+.detail p {
+  font-size: calc(0.5em + 1.4vw);
+}
+
+.first-box{padding:10px;background:#9C0;}
+.second-box{padding:10px; background:#39F;}
+.third-box{padding:10px;background:#F66;}
+.fourth-box{padding:10px;background:#6CC;}

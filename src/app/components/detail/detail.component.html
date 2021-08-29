@@ -1,0 +1,32 @@
+<div class="container" *ngIf="Project">
+  <div class="title-s">
+    <h1 class="text-center" #titleDetail (click)="chageColor(titleDetail)">{{Project.name}}- {{Project.year}}</h1>
+  </div>
+  <div class="row">
+    <div class=" col-sm-12 col-md-6">
+      <img   class="rounded img-fluid " *ngIf="Project.imagen" src="{{url+'get-image/'+Project.imagen}}" >
+      <img class="rounded img-fluid " style="margin-top: 10px;" *ngIf="Project._id === '60de754f5b3d6b08b4561cad'" src="../../../assets/img/nota-page.png" alt="nora-page">
+      <img class="rounded img-fluid " style="margin-top: 10px;" *ngIf="Project._id === '5f6004f505aac02d5448ece4'" src="../../../assets/img/peliculas1.png" alt="nora-page">
+
+    </div>
+
+    <div class=" col-sm-12 col-md-6 detail"  style="margin-top: 10px;">
+      <p>{{Project.description}}</p>
+      <p> <strong>Categorias: </strong>{{Project.category}}</p>
+      <p><strong>Lenguajes: </strong>{{Project.langs}}</p>
+      <p><strong>Link: </strong><a href={{Project.url}} target="_blank">{{Project.url}}</a></p>
+      <p *ngIf="confirm == false">
+        <a role="button" aria-disabled="true" [routerLink] ="['/editar-proyecto', Project._id]" class="btn btn-outline-warning disabled" style="margin-right: 5px;">Editar</a>
+        <a role="button" aria-disabled="true" (click)="setConfir(true)" class="btn btn-outline-danger disabled">Borrar</a>
+      </p>
+      <p *ngIf="confirm == true">
+        <span>¿ Estas seguro que quieres eliminar el proyecto ?</span>
+        <a  (click)="setConfir(false)" class="btn btn-outline-secondary ">Cancelar</a>
+        <a role="button" aria-disabled="true" (click)="deleteProyect(Project._id)" class="btn btn-outline-danger ">Confirmar</a>
+      </p>
+    </div>
+  </div>
+
+</div>
+
+

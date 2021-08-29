@@ -1,0 +1,31 @@
+<div class="container title-s">
+  <div *ngIf="projects">
+    <h1 class="text-center " #titleProyec (click)="chageColor(titleProyec)">Proyectos</h1>
+    <div class="container">
+      <div class="row">
+        <div *ngFor="let projec of projects" class="col-md-4 col-sm-6">
+          <div class="card card-block">
+            <img
+              class="card-img-top"
+              src="{{url+'get-image/'+projec.imagen}}"
+              *ngIf="projec.imagen"
+            />
+            <h3 class="card-title mt-3 mb-3">
+              {{projec.name}}
+            </h3>
+            <p class="card-text">{{projec.langs}}</p>
+            <a [routerLink]="['/detalle/',projec._id]" class="btn detalle"
+              >leer mas</a
+            >
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div *ngIf="!projects">
+    <h1>Cargando ........</h1>
+    <h3>Por  favor esperé un momento</h3>
+  </div>
+</div>
